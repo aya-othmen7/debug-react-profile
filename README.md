@@ -1,40 +1,50 @@
-# React Class-Based Profile App
+## 🐛 Debugging Report
 
-This is a simple React application built with a **class-based component** that displays a person's profile and tracks how long the component has been mounted.
+### 🔍 Goal
+Use React Developer Tools to inspect and debug the application’s component tree, state, and behavior.
 
-## 🚀 Features
+### ✅ Observations
+- Opened the app using `npm start`
+- Used React Developer Tools to inspect the `<App>` component
+- Verified:
+  - `state` includes `Person`, `shows`, and `mountedTime`
+  - `mountedTime` increments every second
+  - `shows` toggles correctly on button click
+  - Profile displays all fields correctly when `shows` is `true`
+  - No warnings or errors in console
+  - Image source is valid
+  - UI behaves as expected with no unexpected rendering or prop/state issues
 
-- ✅ Class-based React component
-- ✅ Local state management
-- ✅ Toggle button to show/hide profile
-- ✅ Timer showing seconds since the component mounted
-- ✅ Styled using React Bootstrap
+---
 
-## 🧠 What You Will Learn
+### 🖼️ Screenshots
 
-- How to use class components in React
-- How to manage state using `this.state`
-- How to use lifecycle methods like `componentDidMount` and `componentWillUnmount`
-- How to use `setInterval` for real-time tracking
-- How to style a component using React Bootstrap
+#### 🔧 React Dev Tools – App Component State
+> Shows correct structure of the `App` component’s state: `Person`, `shows`, `mountedTime`.
 
-## 🖼️ Preview
+| With Profile (`shows: true`) | Without Profile (`shows: false`) |
+|------------------------------|-------------------------------|
+| ![With Profile](./public/screenshots/Shows%20With%20Profile.png) | ![Without Profile](./public/screenshots/Shows%20Without%20profile.png) |
 
-| With Profile | Without Profile |
-|--------------|-----------------|
-| ![With Profile](/public/With%20profile.png) | ![Without Profile](./public/Without%20profile.png) |
+---
 
-## 🛠️ Installation & Setup
-   
-```bash
-# 1. Clone the repo
-git clone https://github.com/your-username/react-class-profile.git
+#### 🔁 React Dev Tools – Timer State
+> Confirms `componentDidMount` was called and `mountedTime` is updating every second.
 
-# 2. Go into the project directory
-cd react-class-profile
+| mountedTime = 4 seconds | mountedTime = 14 seconds |
+|-------------------------|--------------------------|
+| ![4s](./public/screenshots/mounted-time-4.png) | ![10+4s](./public/screenshots/mounted-time-14.png) |
 
-# 3. Install dependencies
-npm install
+---
 
-# 4. Start the React app
-npm start
+#### 🛑 Console – No Warnings or Errors
+> Demonstrates a clean console with no React warnings or errors.
+
+![Console Output](./public/screenshots/console-no-errors.png)
+
+---
+
+### 🧩 Conclusion
+No bugs or issues were found during inspection. All components behave correctly, state updates as expected, and lifecycle methods are functioning properly. The debugging tools confirmed the application is stable and error-free.
+
+✅ Debugging process successfully completed.
