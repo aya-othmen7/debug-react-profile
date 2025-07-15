@@ -14,14 +14,29 @@ class App extends Component {
         profession: "Industrial Computer Engineer",
       },
       shows: false,
+      mountedTime: 0,
     };
+    this.intervalId = null;
   }
+
   toggleShow = () => {
     this.setState((prevState) => ({ shows: !prevState.shows }));
   };
 
+  componentDidMount() {
+    this.intervalId = setInterval(() => {
+      this.setState((prevState) => ({
+        mountedTime: prevState.mountedTime + 1,
+      }));
+    }, 1000);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.intervalId);
+  }
+
   render() {
-    const { Person, shows } = this.state;
+    const { Person, shows, mountedTime } = this.state;
 
     return (
       <Container className="text-center py-4">
@@ -51,6 +66,11 @@ class App extends Component {
             </Card.Body>
           </Card>
         )}
+
+        <p className="mt-4 text-secondary">
+          ⏱ Component has been mounted for <strong>{mountedTime}</strong>{" "}
+          seconds
+        </p>
       </Container>
     );
   }
