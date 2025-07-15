@@ -24,7 +24,7 @@ Use React Developer Tools to inspect and debug the application’s component tre
 
 | With Profile (`shows: true`) | Without Profile (`shows: false`) |
 |------------------------------|-------------------------------|
-| ![With Profile](./public/screenshots/Shows%20With%20Profile.png) | ![Without Profile](./public/screenshots/Shows%20Without%20profile.png) |
+| ![With Profile](./public/screenshots/Shows%20With%20Profile.png) | ![Without Profile](./public/screenshots/Shows%20Without%20Profile.png) |
 
 ---
 
